@@ -1,0 +1,5 @@
+node_modules/
+
+.session-cliente-predeterminado/
+
+..wwebjs_cache/
