@@ -47,7 +47,7 @@ app.get('/whatsap/:numero', async (req, res) => {
 });
 
 // Ruta para mostrar el código QR en el navegador
-app.get('/qr', (req, res) => {
+app.get('/', (req, res) => {
   if (qrCodeData) {
     res.send(`
       <h1>Escanea el código QR con tu aplicación de WhatsApp</h1>
