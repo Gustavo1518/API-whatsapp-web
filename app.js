@@ -7,7 +7,10 @@ const qrcode = require('qrcode-terminal');
 const client = new Client({
   authStrategy: new LocalAuth({
       clientId: "cliente-predeterminado" // Puedes usar diferentes IDs para múltiples sesiones
-  })
+  }),
+  puppeteer: {
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+}
 });
 
 app.get('/whatsap/:numero', async (req, res) => {
